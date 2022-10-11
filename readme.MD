@@ -1,5 +1,5 @@
 # Forest Chrome Extension Exceptional Use
-Use site for specific amount of time without destroying your streak
+Use website for specific amount of time without destroying your streak
 
 ## Preview
 ![](screenshot.png)
