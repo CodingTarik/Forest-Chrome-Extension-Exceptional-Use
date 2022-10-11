@@ -2,6 +2,7 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+// Set Cookie 
 function setCookie(name, value, seconds) {
     var expires = "";
     if (seconds) {
@@ -12,6 +13,7 @@ function setCookie(name, value, seconds) {
     document.cookie = name + "=" + (value || "") + expires + "; path=/";
 }
 
+// get cookie
 function getCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
@@ -27,6 +29,7 @@ function eraseCookie(name) {
     document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
 
+// async function to hide forest content "Tree is still growing"
 async function hideForest() {
     await (async function() {
         var counter = 0;
@@ -39,6 +42,7 @@ async function hideForest() {
     })();
 }
 
+// adds a button for exceptional timeout to forest
 function addBtn(shadow, minutes) {
     var wrapper = document.createElement("div");
 
@@ -53,10 +57,13 @@ function addBtn(shadow, minutes) {
     shadow.appendChild(wrapper);
 }
 
+// if there is a cookie set, then also hide 
+// if we took a break for a site, we dont want to have the popup again for that site
 if (getCookie("time-" + window.location.hostname)) {
     hideForest();
 }
 
+// adds buttons to forest, we need to wait a little bit that the forest div is created
 setTimeout(function() {
     var shadow = document.getElementById("forest-ext-shadow-host").shadowRoot.querySelectorAll("div.sc-ftvSup.bYNZtS")[0];
     addBtn(shadow, 5);
