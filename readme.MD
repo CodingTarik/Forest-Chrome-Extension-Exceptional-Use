@@ -5,4 +5,4 @@ Use site for specific amount of time without destroying your streak
 ![](screenshot.png)
 
 ## Attention
-This isn't a official extension!
+This isn't an official extension!
