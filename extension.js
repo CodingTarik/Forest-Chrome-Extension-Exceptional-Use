@@ -1,3 +1,8 @@
+/* Not an official extension
+Forest: https://chrome.google.com/webstore/detail/forest-stay-focused-be-pr/kjacjjdnoddnpbbcjilcajfhhbdhkpgk?hl=de
+You can use: https://chrome.google.com/webstore/detail/user-javascript-and-css/nbhcbdghjpllgmfilhnhkllmkecfmpld for JS-Injection */
+
+
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
